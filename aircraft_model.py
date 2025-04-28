@@ -28,7 +28,7 @@ delta_max = 27 * np.pi / 180
 # Hx, bx
 H_state = np.vstack((np.eye(3), -np.eye(3)))
 b_state = np.vstack((x_max[:3], -x_min[:3]))
-H_gamma = np.array([[1, 0, -1], [-1, 0, 1]])
+H_gamma = np.array([[-1, 0, 1], [1, 0, -1]])
 b_gamma = np.array([[gamma_max], [gamma_max]])
 H_x = np.vstack((H_state, H_gamma))
 b_x = np.vstack((b_state, b_gamma)).flatten()
